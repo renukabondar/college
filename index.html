@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>college Form</title>
+  <style>
+    body {
+      position: relative; /* for overlay */
+      background-image: url("sveri2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;  /* covers entire viewport */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 51, 102, 0.5); /* navy-blue transparent overlay */
+      z-index: -1; /* behind page content */
+    }
+
+    form {
+      background: rgba(0, 0, 0, 0.6); /* semi-transparent form background */
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    h2, h4, h6 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>COLLEGE FORM</h2>
+  </header>
+  <main>
+    <form action="/action.radha">
+      <input type="text" placeholder="username" name="username" required />
+      <input type="password" placeholder="password" name="password" required />
+      
+      <section>
+        <h4>Select Department</h4>
+        <label><input type="radio" value="computer" name="department" /> computer</label><br/>
+        <label><input type="radio" value="electrical" name="department" /> electrical</label><br/>
+        <label><input type="radio" value="electronics" name="department" /> electronics</label><br/>
+        <label><input type="radio" value="mechanical" name="department" /> mechanical</label><br/>
+        <label><input type="radio" value="civil" name="department" /> civil</label>
+      </section>
+      
+      <section>
+        <h4>Select Class</h4>
+        <label><input type="radio" value="First Year" name="class" /> First Year</label><br/>
+        <label><input type="radio" value="Second Year" name="class" /> Second Year</label><br/>
+        <label><input type="radio" value="Last Year" name="class" /> Last Year</label>
+      </section>
+      
+      <h4>Select College Branch</h4>
+      <select name="city">
+        <option value="Pandharpur">Pandharpur</option>   
+        <option value="Solapur">Solapur</option>
+        <option value="Pune">Pune</option>
+      </select>
+      
+      <br/><br/>
+      
+      <iframe width="200" height="150" src="https://www.youtube.com/embed/QBBQHjaJvE0?si=Ny6E0n45d0gnMoJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+      <br/><br/>
+      
+      <textarea name="feedback" placeholder="Please give me your valuable feedback" rows="3"></textarea>
+      
+      <br/><br/>
+      
+      <input type="submit" value="Submit" />
+      
+      <hr />
+      <footer>
+        <h6>Contact Me: sveri123@gmail.com</h6>
+      </footer>
+    </form>
+  </main>
+</body>
+</html>
